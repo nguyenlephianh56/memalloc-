@@ -1,3 +1,5 @@
+#include "common.h"
+
 void init_sample_data(Block blocks[], int *n, Process procs[], int *m)
 {
     int bs[] = {100, 500, 200, 300, 600};   /* kích thước 5 block */
@@ -14,4 +16,16 @@ void init_sample_data(Block blocks[], int *n, Process procs[], int *m)
         procs[i].size = ps[i];
         procs[i].block_idx = NOT_ALLOCATED;
     }
+}
+
+void copy_blocks(const Block src[], Block dst[], int n)
+{
+    for (int i = 0; i < n; i++)
+        dst[i] = src[i];
+}
+
+void reset_processes(Process procs[], int m)
+{
+    for (int i = 0; i < m; i++)
+        procs[i].block_idx = NOT_ALLOCATED;
 }

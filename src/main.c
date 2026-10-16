@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         printf("Da doc du lieu tu file: %s\n", argv[1]);
     } else {
         init_sample_data(g_blocks, &g_n, g_procs, &g_m);
-        printf("Dung du lieu mau (chua truyen file input).\n");
+        printf("Chay kich ban 1 (small): du lieu gan cung trong code, chua truyen file input.\n");
     }
     printf("So block: %d | So tien trinh: %d\n", g_n, g_m);
 
